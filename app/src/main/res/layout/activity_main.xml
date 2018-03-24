@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout android:background="#F3B59B"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <FrameLayout
+     android:id="@+id/content_frame"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipe_refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recycler_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <!--</android.support.v7.widget.RecyclerView>-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <TextView
+        android:id="@+id/empty_state_text"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no_search_result_found"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <ListView
+
+        android:id="@+id/search_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight = "0dp"
+        android:divider="@null"
+        >
+
+    </ListView>
+
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+ </FrameLayout>
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:id="@+id/nav_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--app:menu="@menu/drawer_view"/>-->
+    <ListView android:id="@+id/drawer_list"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:entries="@array/navigation_drawer_list"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#adefda"/>
+</android.support.v4.widget.DrawerLayout>
